@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/STbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFF0000"
+            android:text="정지"
+            android:textColor="#FFFFFFFF"
+            android:textSize="40dp" />
+
+        <Button
+            android:id="@+id/Libutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#FF00FFFF"
+            android:text="Light"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/top"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/left"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:background="@drawable/black" />
+
+            <Button
+                android:id="@+id/Bubutton"
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:background="@drawable/labu" />
+
+            <View
+                android:id="@+id/right"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:background="@drawable/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/bottom"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:background="@drawable/black" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="left" />
+
+    <TextView
+        android:id="@+id/values1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
