@@ -1,0 +1,49 @@
+package randomnumber;
+
+import java.util.Scanner;
+
+public class mainClass2 {
+
+	public static void main(String[] args) {
+		int ranNum, userInput, level;
+		Scanner sc = new Scanner(System.in);
+		// 1.랜덤숫자
+		double random = Math.random();
+		ranNum = (int) (random * 100) + 1;
+		System.out.println(ranNum);
+
+		// 2.주어질 기회 입력
+		System.out.print("기회 횟수를 입력해 주세요: ");
+		level = sc.nextInt();
+		int i = 0;
+		// 3.크기 비교 , 10번 기회 끝
+		while (true) {
+
+			System.out.print("숫자를 입력해주세요: ");
+			userInput = sc.nextInt();
+			i++;
+
+			if (i < level) {
+				if (userInput <= 0 || userInput > 100) {
+					i--;
+					System.out.println("1~100까지 숫자를 입력해주세요: " + "남은기회: " + (level - i));
+				} else if (ranNum < userInput) {
+					System.out.println(userInput + " 보다작음습니다. " + " 남은기회: " + (level - i));
+
+				} else if (ranNum > userInput) {
+					System.out.println(userInput + " 보다큽니다." + " 남은기회: " + (level - i));
+
+				} else if (ranNum == userInput) {
+					System.out.println("정답입니다.");
+					break;
+				}
+			} else {
+				break;
+			}
+
+		}
+		System.out.println("끝");
+
+	}
+
+}
