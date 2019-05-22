@@ -26,20 +26,21 @@ public class mainClass2 {
 		}
 		
 		w = 0;
-		
+		int arr1[] = new int[arr.length];
 		while(w < arr.length) {
+			
 			int a = 0;
 			r = (int)(Math.random()* arr.length);
 			if(swit[r] == false) {
 				swit[r] = true;
 				a = arr[r];
-				arr[w] = a;
+				arr1[w] = a;
 				w++;
 				
 			}
 		}
 		
-		return arr;
+		return arr1;
 		
 		
 	}
